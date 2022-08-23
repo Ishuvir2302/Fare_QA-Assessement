@@ -1,0 +1,30 @@
+{
+  "name": "fh-qa-assessment",
+  "version": "1.0.0",
+  "description": "FareHarbor Quality Engineer Assessment.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FareHarbor/qa-assessment.git"
+  },
+  "keywords": [
+    "FareHarbor",
+    "Cypress",
+    "Javascript"
+  ],
+  "author": "FareHarbor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FareHarbor/qa-assessment/issues"
+  },
+  "homepage": "https://github.com/FareHarbor/qa-assessment#readme",
+  "dependencies": {
+    "cypress": "^10.6.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.4.0"
+  }
+}
