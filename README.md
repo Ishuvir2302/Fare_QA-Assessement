@@ -1,4 +1,4 @@
-# # FareHarbor | QA Assessment
+# FareHarbor | QA Assessment
 
   
 
