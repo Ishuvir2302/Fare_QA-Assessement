@@ -28,7 +28,7 @@ If you have any issues with the installation, we recommend you follow the [troub
   
 ### Fork this Repo
 
-First, you will need to fork: https://github.com/FareHarbor/qa-assessment
+First, you will need to clone: https://github.com/FareHarbor/qa-assessment
 
 In order for us to be able to properly evaluate your results, we ask you to submit your changes within a private repository on GitHub and add our [email](priamo.ramirez@fareharbor.com), as a contributor.
 
