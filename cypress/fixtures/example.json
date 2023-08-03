@@ -1,5 +1,11 @@
 {
-  "name": "Using fixtures to represent data",
-  "email": "hello@cypress.io",
-  "body": "Fixtures are a great way to mock data for responses to routes"
+  "adultCount": "1",
+  "sightSeeingPersons": 5,
+  "privateTourPersons": "4",
+  "cardNumber": "4242424242424242",
+  "expiryMonth": "7",
+  "expiryYearIndex": 2,
+  "invalidCards": ["4000000000000002","4000000000009995"],
+  "childrenCount": "2",
+  "activitiesName":["Walking Tour","Sightseeing Bus Tour","Big Apple's Private Tour","Gift Card"]
 }

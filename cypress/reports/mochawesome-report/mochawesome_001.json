@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-08-03T08:37:32.141Z",
+    "end": "2023-08-03T08:37:44.078Z",
+    "duration": 11937,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a7249ad1-5bcb-4ff7-b22e-dec92b4af8d1",
+      "title": "",
+      "fullFile": "cypress/e2e/invoiceCalculation.cy.js",
+      "file": "cypress/e2e/invoiceCalculation.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2a8f7c87-4c4a-45d8-bd2e-904575fcb9c4",
+          "title": "FareHarbor - Activity invoice calculation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "6f3bc151-515c-40bb-a1be-6b1244609003",
+              "title": "Validate invoice calculation ",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "I validate invoice perform correct calculation",
+                  "fullTitle": "FareHarbor - Activity invoice calculation Validate invoice calculation  I validate invoice perform correct calculation",
+                  "timedOut": null,
+                  "duration": 7468,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_tourItemsPage.tourItemsPage.validatePageResponse();\n_tourItemsPage.tourItemsPage.selectActivity(_example.default.activitiesName[1]);\n_activityDetailsPage.activityPage.checkTourPage(_example.default.activitiesName[1]);\n_activityDetailsPage.activityPage.selectAvailableDate();\n_activityDetailsPage.activityPage.selectAvailableTime();\n_personCountPage.personCountPage.addPerson(_example.default.sightSeeingPersons);\ncy.log('Total Person: ' + _example.default.sightSeeingPersons);\n_PaymentDetailsPage.paymentDetails.captureActivityAmount();\n_PaymentDetailsPage.paymentDetails.compareSubtotalAmount(_example.default.sightSeeingPersons);\ncy.log('Subtotal is correctly captured');",
+                  "err": {},
+                  "uuid": "7b721190-e0d7-4fa2-9d10-36abd6a403e6",
+                  "parentUUID": "6f3bc151-515c-40bb-a1be-6b1244609003",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "7b721190-e0d7-4fa2-9d10-36abd6a403e6"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 7468,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

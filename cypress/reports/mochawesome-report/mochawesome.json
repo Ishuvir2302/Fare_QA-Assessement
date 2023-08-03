@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-08-03T08:36:51.805Z",
+    "end": "2023-08-03T08:37:19.884Z",
+    "duration": 28079,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "bfead355-ef68-44e3-9119-1938e53c51a4",
+      "title": "",
+      "fullFile": "cypress/e2e/futureBooking.cy.js",
+      "file": "cypress/e2e/futureBooking.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a6a18108-5cf6-4b47-a4f3-be181a84422e",
+          "title": "FareHarbor - Future Booking",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "745d2c9b-9af3-4cc3-b8ba-2d16be6f1332",
+              "title": "Validate future bookings",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "I validate booking 1 month from now",
+                  "fullTitle": "FareHarbor - Future Booking Validate future bookings I validate booking 1 month from now",
+                  "timedOut": null,
+                  "duration": 19361,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_tourItemsPage.tourItemsPage.validatePageResponse();\n_tourItemsPage.tourItemsPage.selectActivity(_example.default.activitiesName[1]);\n_activityDetailsPage.activityPage.checkTourPage(_example.default.activitiesName[1]);\n_activityDetailsPage.activityPage.selectFutureMonthDate();\n_activityDetailsPage.activityPage.selectAvailableTime();\ncy.log('Future Month availability selected');\n_personCountPage.personCountPage.addPerson(_example.default.sightSeeingPersons);\ncy.log('Total Person: ' + _example.default.sightSeeingPersons);\n_PaymentDetailsPage.paymentDetails.fillContactInformation();\n_PaymentDetailsPage.paymentDetails.fillPaymentCC(_example.default.cardNumber, _example.default.expiryMonth, _example.default.expiryYearIndex);\n_PaymentDetailsPage.paymentDetails.confirmPayment();\n_bookingConfirmationPage.bookingConfirmed.CheckBookingStatus();\n_bookingConfirmationPage.bookingConfirmed.validateBookingDetails(_example.default.activitiesName[1], _example.default.sightSeeingPersons);\n_bookingConfirmationPage.bookingConfirmed.validateBookingMonth();",
+                  "err": {},
+                  "uuid": "fec8194f-6dc1-4e15-943d-c4139354210a",
+                  "parentUUID": "745d2c9b-9af3-4cc3-b8ba-2d16be6f1332",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "I validate booking 1 year from now",
+                  "fullTitle": "FareHarbor - Future Booking Validate future bookings I validate booking 1 year from now",
+                  "timedOut": null,
+                  "duration": 3245,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_tourItemsPage.tourItemsPage.validatePageResponse();\n_tourItemsPage.tourItemsPage.selectActivity(_example.default.activitiesName[1]);\n_activityDetailsPage.activityPage.checkTourPage(_example.default.activitiesName[1]);\n_activityDetailsPage.activityPage.selectFutureYearDate();\n_activityDetailsPage.activityPage.checkNoFutureAvailability();",
+                  "err": {},
+                  "uuid": "e1f1a3b6-4df2-446c-ab16-02d852c86fbc",
+                  "parentUUID": "745d2c9b-9af3-4cc3-b8ba-2d16be6f1332",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "fec8194f-6dc1-4e15-943d-c4139354210a",
+                "e1f1a3b6-4df2-446c-ab16-02d852c86fbc"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 22606,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

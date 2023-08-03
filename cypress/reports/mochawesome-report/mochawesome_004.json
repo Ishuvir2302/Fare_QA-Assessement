@@ -1,0 +1,357 @@
+{
+  "stats": {
+    "suites": 7,
+    "tests": 8,
+    "passes": 8,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-08-03T08:39:22.842Z",
+    "end": "2023-08-03T08:39:47.395Z",
+    "duration": 24553,
+    "testsRegistered": 8,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2f470027-c8db-4979-8b47-e035163960cb",
+      "title": "",
+      "fullFile": "cypress/e2e/test.cy.js",
+      "file": "cypress/e2e/test.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "07657248-8323-4ab5-b247-b668289bce4a",
+          "title": "FareHarbor - Book Online | Adults",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "c858464b-b74a-4837-a540-e5d5bd6f6f9b",
+              "title": "When page is initially opened",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "company information is present",
+                  "fullTitle": "FareHarbor - Book Online | Adults When page is initially opened company information is present",
+                  "timedOut": null,
+                  "duration": 4000,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_tourItemsPage.tourItemsPage.validatePageResponse();",
+                  "err": {},
+                  "uuid": "38fee221-8888-428d-a154-65dbf0ccc65e",
+                  "parentUUID": "c858464b-b74a-4837-a540-e5d5bd6f6f9b",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "38fee221-8888-428d-a154-65dbf0ccc65e"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 4000,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "2b207e6c-3752-4366-bfa4-c12e9026dfa4",
+              "title": "Select Activity: Walking tour",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "I picked the activity: walking tour",
+                  "fullTitle": "FareHarbor - Book Online | Adults Select Activity: Walking tour I picked the activity: walking tour",
+                  "timedOut": null,
+                  "duration": 594,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_tourItemsPage.tourItemsPage.selectActivity(_example.default.activitiesName[0]);\ncy.log(\"Selected Activity:\" + _example.default.activitiesName[0]);",
+                  "err": {},
+                  "uuid": "30930784-3f90-4ab8-8100-37ba3d44da10",
+                  "parentUUID": "2b207e6c-3752-4366-bfa4-c12e9026dfa4",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "30930784-3f90-4ab8-8100-37ba3d44da10"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 594,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "000b0805-5e1d-4462-b94a-f10ed5bb554c",
+              "title": "I checked the availability",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "I picked a date/time for my activity",
+                  "fullTitle": "FareHarbor - Book Online | Adults I checked the availability I picked a date/time for my activity",
+                  "timedOut": null,
+                  "duration": 1362,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_activityDetailsPage.activityPage.selectAvailableDate();\n_activityDetailsPage.activityPage.checkAvailability();",
+                  "err": {},
+                  "uuid": "6b635556-45a5-400d-ae08-bee095baa3f8",
+                  "parentUUID": "000b0805-5e1d-4462-b94a-f10ed5bb554c",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "6b635556-45a5-400d-ae08-bee095baa3f8"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1362,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "740fe600-381d-4a4c-b897-0f2f0244c77c",
+              "title": "I select the amount of people",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "I added 1 adult",
+                  "fullTitle": "FareHarbor - Book Online | Adults I select the amount of people I added 1 adult",
+                  "timedOut": null,
+                  "duration": 2079,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_personCountPage.personCountPage.addPeople(_example.default.adultCount);",
+                  "err": {},
+                  "uuid": "83d3a86a-8fd0-431b-9fe0-3a16dc65c210",
+                  "parentUUID": "740fe600-381d-4a4c-b897-0f2f0244c77c",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "83d3a86a-8fd0-431b-9fe0-3a16dc65c210"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 2079,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "3e01514f-8b60-466e-b11b-9e78947a440d",
+              "title": "I fill in my contact information",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "I add my name, phone number and email",
+                  "fullTitle": "FareHarbor - Book Online | Adults I fill in my contact information I add my name, phone number and email",
+                  "timedOut": null,
+                  "duration": 2192,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_PaymentDetailsPage.paymentDetails.fillContactInformation();",
+                  "err": {},
+                  "uuid": "6c9f3435-1cda-4d30-92df-c1d798e95b09",
+                  "parentUUID": "3e01514f-8b60-466e-b11b-9e78947a440d",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "I enter my credit card details",
+                  "fullTitle": "FareHarbor - Book Online | Adults I fill in my contact information I enter my credit card details",
+                  "timedOut": null,
+                  "duration": 1791,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_PaymentDetailsPage.paymentDetails.fillPaymentCC(_example.default.cardNumber, _example.default.expiryMonth, _example.default.expiryYearIndex);",
+                  "err": {},
+                  "uuid": "b92df89a-abd5-491e-a51d-427a1acc81b5",
+                  "parentUUID": "3e01514f-8b60-466e-b11b-9e78947a440d",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "6c9f3435-1cda-4d30-92df-c1d798e95b09",
+                "b92df89a-abd5-491e-a51d-427a1acc81b5"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 3983,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "ee55bfd6-e0a6-4781-8478-a3636ac310eb",
+              "title": "I pay and get confirmation",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "I complete and play",
+                  "fullTitle": "FareHarbor - Book Online | Adults I pay and get confirmation I complete and play",
+                  "timedOut": null,
+                  "duration": 191,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_PaymentDetailsPage.paymentDetails.confirmPayment();",
+                  "err": {},
+                  "uuid": "906c5c92-5ba0-49c4-8c13-a777259ea48f",
+                  "parentUUID": "ee55bfd6-e0a6-4781-8478-a3636ac310eb",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "I get my receipt",
+                  "fullTitle": "FareHarbor - Book Online | Adults I pay and get confirmation I get my receipt",
+                  "timedOut": null,
+                  "duration": 6397,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_bookingConfirmationPage.bookingConfirmed.CheckBookingStatus();",
+                  "err": {},
+                  "uuid": "86eae261-204e-41f7-ada4-228966cda721",
+                  "parentUUID": "ee55bfd6-e0a6-4781-8478-a3636ac310eb",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "906c5c92-5ba0-49c4-8c13-a777259ea48f",
+                "86eae261-204e-41f7-ada4-228966cda721"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 6588,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

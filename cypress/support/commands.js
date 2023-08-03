@@ -16,7 +16,20 @@
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
 //
-//
+// Custom command to Navigate to fareharbor
+Cypress.Commands.add("LaunchFareharbor", () => {
+   cy.visit(Cypress.env('url'))
+})
+
+Cypress.Commands.add('invokeText', (locator) => {
+    return cy.get(locator).invoke('text');
+});
+
+Cypress.Commands.add('dropdownSelect', (dataTestId, value) => {
+    return cy.get(dataTestId).select(value);
+});
+
+
 // -- This is a dual command --
 // Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
 //

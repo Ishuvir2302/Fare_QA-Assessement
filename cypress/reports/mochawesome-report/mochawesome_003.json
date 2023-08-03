@@ -1,0 +1,128 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-08-03T08:38:38.644Z",
+    "end": "2023-08-03T08:39:09.301Z",
+    "duration": 30657,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "674a4e94-5bc5-4585-9d4c-2dd6966d4446",
+      "title": "",
+      "fullFile": "cypress/e2e/privateTourBooking.cy.js",
+      "file": "cypress/e2e/privateTourBooking.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2277dc69-39e5-4378-8d4d-4558c93cf2b2",
+          "title": "FareHarbor - Big Apple Private Tour Booking",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "884dd095-3515-44bd-a0da-af6afaf3fa57",
+              "title": "Validate big apple private tour booking",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "I validate the booking process",
+                  "fullTitle": "FareHarbor - Big Apple Private Tour Booking Validate big apple private tour booking I validate the booking process",
+                  "timedOut": null,
+                  "duration": 10659,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "_tourItemsPage.tourItemsPage.validatePageResponse();\n_tourItemsPage.tourItemsPage.selectActivity(_example.default.activitiesName[2]);\n_activityDetailsPage.activityPage.matchTourHeading(_example.default.activitiesName[2]);\n_activityDetailsPage.activityPage.selectAvailableDate();\n_activityDetailsPage.activityPage.checkAvailability();\n_personCountPage.personCountPage.privatetourPerson(_example.default.privateTourPersons);\ncy.log('Total Person: ' + _example.default.privateTourPersons);\n_personCountPage.personCountPage.cateringOption();\n_PaymentDetailsPage.paymentDetails.fillContactInformation();\n_PaymentDetailsPage.paymentDetails.fillPaymentCC(_example.default.cardNumber, _example.default.expiryMonth, _example.default.expiryYearIndex);\n_PaymentDetailsPage.paymentDetails.confirmPayment();\n_bookingConfirmationPage.bookingConfirmed.CheckBookingStatus();\n_bookingConfirmationPage.bookingConfirmed.validateBookingDetails(_example.default.activitiesName[2], _example.default.privateTourPersons);",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `.item-grid`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `.item-grid`, but never found it.\n    at TourItemsPage.selectActivity (webpack:///./cypress/support/pageObjects/tourItemsPage.js:13:7)\n    at Context.eval (webpack:///./cypress/e2e/privateTourBooking.cy.js:21:26)",
+                    "diff": null
+                  },
+                  "uuid": "1a016252-b7eb-4cea-bdd3-bc7ab304d382",
+                  "parentUUID": "884dd095-3515-44bd-a0da-af6afaf3fa57",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "1a016252-b7eb-4cea-bdd3-bc7ab304d382"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 10659,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

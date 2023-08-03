@@ -1,62 +1,62 @@
+/// <reference types="Cypress" />
 
-  import Calendar from '../pageObjects/calendar.js'
-  import Utils from '../pageObjects/utils.js'
-  import Bookings from '../pageObjects/booking.js'
+import { tourItemsPage } from "../support/pageObjects/tourItemsPage"
+import { activityPage } from "../support/pageObjects/activityDetailsPage"
+import { personCountPage } from "../support/pageObjects/personCountPage"
+import { bookingConfirmed } from "../support/pageObjects/bookingConfirmationPage"
+import { paymentDetails } from "../support/pageObjects/PaymentDetailsPage"
+import fareHarborData from '../fixtures/example.json'
 
-  describe('FareHarbor - Book Online | Adults', function () {
-    const calendar = new Calendar()
-    const utils = new Utils()
-    const bookings = new Bookings()
-    before(function () {
-      cy.visit('https://demo.fareharbor.com/embeds/book/bigappletours/items/?full-items=yes')
+describe('FareHarbor - Book Online | Adults', { testIsolation: false }, () => {
+    let isAnyTestFailed = false;
+
+    before('Open Fareharbor Homepage', () => {
+
+        cy.LaunchFareharbor()
     })
-  
+
+    
+     
     context('When page is initially opened', function () {
-      it('company information is present', function () {
-        cy.request('https://demo.fareharbor.com/api/v1/companies/bigappletours/').then((response) => {
-          expect(response.body.company.name).to.eq("Big Apple Tours and Activitys")
-          expect(response.status).to.eq(403)
+        it('company information is present', function () {
+            tourItemsPage.validatePageResponse()
         })
-      })
-      it('activity overlay should be present', function () {
-        cy.get('#ng-app').should.('be.visible');
-      })
-    }),    
-    context('I pick an activity', function () {
-      it('Im able to click the activity', function () {
-        cy.get('.grid-block-width-1-3').click();
-      })
-      it('Im able to see the calendar', function () {
-        cy.get('.test-calendar-indicator').should('be.visible');
-      })
-    }),    
-    context('I select a day/time for my activity', function () {
-      it('I pick a day', function () {
-        calendar.selectNextDay();
-      })
-      it('I pick a time', function () {
-        calendar.selectTime();
-      })
     })
+
+    context('Select Activity: Walking tour', function () {
+        it('I picked the activity: walking tour', function () {
+            tourItemsPage.selectActivity(fareHarborData.activitiesName[0])
+            cy.log("Selected Activity:"+fareHarborData.activitiesName[0])
+        })
+    }),
+
+        context('I checked the availability', function () {
+            it('I picked a date/time for my activity', function () {
+                activityPage.selectAvailableDate()
+                activityPage.checkAvailability()
+            })
+        })
+
     context('I select the amount of people', function () {
-      it('I add 26 adults', function () {
-        utils.addPeople(26);
-      })
+        it('I added 1 adult', function () {
+            personCountPage.addPeople(fareHarborData.adultCount)
+        })
     })
     context('I fill in my contact information', function () {
-      it('I add my name, phone number and email', function () {
-        bookings.fillContactInformation();
-      })
-      it('I enter my credit card details', function () {
-        bookings.fillPaymentCC();
-      })
+        it('I add my name, phone number and email', function () {
+            paymentDetails.fillContactInformation()
+        })
+        it('I enter my credit card details', function () {
+            paymentDetails.fillPaymentCC(fareHarborData.cardNumber, fareHarborData.expiryMonth, fareHarborData.expiryYearIndex)
+        })
     })
     context('I pay and get confirmation', function () {
-      it('I complete and play', function () {
-        cy.get('btn-huge').click();
-      })
-      it('I get my receipt', function () {
-        cy.get('.receipt-header').should('be.visible');
-      })
+        it('I complete and play', function () {
+            paymentDetails.confirmPayment()
+        })
+        it('I get my receipt', function () {
+            bookingConfirmed.CheckBookingStatus()
+        })
     })
-  })
+})
+

@@ -4,7 +4,12 @@
   "description": "FareHarbor Quality Engineer Assessment.",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run"
+    "test": "npx cypress run",
+    "headTest": "npm run test --headed",
+    "chromeTest": "npm run test --browser chrome",
+    "tagTest": "cypress run --record --tag 'staging'",
+    "combine-reports": "mochawesome-merge ./cypress/reports/mochawesome-report/*.json > cypress/reports/output.json",
+    "generate-reports": "npx marge cypress/reports/mochawesome-report/mochawesome.json"
   },
   "repository": {
     "type": "git",
@@ -21,10 +26,13 @@
     "url": "https://github.com/FareHarbor/qa-assessment/issues"
   },
   "homepage": "https://github.com/FareHarbor/qa-assessment#readme",
-  "dependencies": {
-    "cypress": "^10.6.0"
-  },
   "devDependencies": {
-    "@faker-js/faker": "^7.4.0"
+    "@faker-js/faker": "^7.4.0",
+    "cypress": "^12.17.2",
+    "cypress-xpath": "^2.0.1",
+    "mocha": "^10.2.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
   }
 }
