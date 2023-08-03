@@ -20,6 +20,12 @@ export class ActivityDetailsPage{
         cy.wrap($nextDay).click();        
     })
   }
+
+  filterAvailableDate(){
+    cy.get('.calendar-small-day:not([class*="empty"]):not([class*="no-bookable"]').first().click()
+    cy.log('Selecting only available dates')
+  }
+
   selectFutureMonthDate(){
     cy.get('.test-select-next-month-action').click();
     cy.log('Chevron is selected')

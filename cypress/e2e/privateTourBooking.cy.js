@@ -20,7 +20,7 @@ describe('FareHarbor - Big Apple Private Tour Booking', { testIsolation: false }
             tourItemsPage.validatePageResponse()
             tourItemsPage.selectActivity(fareHarborData.activitiesName[2])
             activityPage.matchTourHeading(fareHarborData.activitiesName[2])
-            activityPage.selectAvailableDate()
+            activityPage.filterAvailableDate()
             activityPage.checkAvailability()
             personCountPage.privatetourPerson(fareHarborData.privateTourPersons)
             cy.log('Total Person: ' + fareHarborData.privateTourPersons)
